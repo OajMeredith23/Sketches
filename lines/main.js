@@ -7,10 +7,12 @@ var coff = 0;
 var xoff = 0;
 var yoff = 0;
 
+let canvasParent = document.getElementById('p5Sketch'),
+    canvasWidth = canvasParent.offsetWidth;
 function setup() {
-    createCanvas(400, 400);
+    var canvas = createCanvas(canvasWidth, canvasWidth);
+    canvas.parent('p5Sketch');
 }
-
 function draw() {
     var xPos = map(noise(xoff), 0, 1, 100, width);
     var yPos = map(noise(yoff), 0, 1, 100, height);
