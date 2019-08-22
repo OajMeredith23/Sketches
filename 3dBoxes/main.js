@@ -16,10 +16,8 @@ function setup() {
 }
 
 function draw() {
-    background(100);
+    background(255);
     ortho(-500, 500, -500, 500, 0, 700);
-    // directionalLight(255, 0, 255, 0, -1, 0)
-    // translate(0, 50, -50)
     rotateX(-QUARTER_PI);
     rotateY(ma);
 
