@@ -1,1 +1,1 @@
-![alt text](Screen Shot 2019-08-22 at 1.32.06 PM.png "Logo Title Text 1")
+![Screen shot of sketch](screenshot.png "Screen shot of sketch")
