@@ -1,15 +1,14 @@
+// Oliver Meredith
+// https://www.olivermeredith.com/
+
 
 var inc = 0.02;
 var coff = 0;
 var xoff = 0;
 var yoff = 0;
 
-let canvasParent = document.getElementById('p5Sketch'),
-    canvasWidth = canvasParent.offsetWidth;
-console.log(canvasWidth)
 function setup() {
-    var canvas = createCanvas(canvasWidth, canvasWidth);
-    canvas.parent('p5Sketch');
+    createCanvas(400, 400);
 }
 
 function draw() {
