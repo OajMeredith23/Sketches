@@ -4,6 +4,8 @@
 var inc = 0;
 var xoff = 0, yoff = 0;
 let center, yLength;
+let numCols;
+
 let canvasParent = document.getElementById('p5Sketch'),
     canvasWidth = canvasParent.offsetWidth;
 
@@ -13,6 +15,9 @@ function setup() {
 
     center = width / 2
     noFill()
+
+    numCols = map(width, 0, 700, 0, 10)
+    numRows = map(width, 0, 700, 4, 13)
 }
 
 function draw() {
@@ -20,10 +25,11 @@ function draw() {
     stroke(225, 225, 225, 125)
 
     translate(width - 20, -10)
-    for (let cols = 0; cols < 9; cols++) {
+
+    for (let cols = 0; cols < numCols; cols++) {
         push()
         translate(-60 * cols, 10)
-        for (let rows = 0; rows < 12; rows++) {
+        for (let rows = 0; rows < numRows; rows++) {
             if (rows > 1) {
                 translate(0, 10 * 5)
                 for (let y = 0; y < 30; y++) {
@@ -36,5 +42,5 @@ function draw() {
         pop()
     }
 
-    inc += 0.02
+    inc += 0.06
 }
