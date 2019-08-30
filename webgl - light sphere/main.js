@@ -7,7 +7,7 @@ console.log(canvasWidth)
 
 let angle = 0
 function setup() {
-    var canvas = createCanvas(canvasWidth, canvasWidth, WEBGL);
+    var canvas = createCanvas(canvasWidth, canvasWidth * 1.5, WEBGL);
     canvas.parent('p5Sketch');
 
 
@@ -17,7 +17,6 @@ function draw() {
     background(25);
     noStroke()
 
-    // ambientLight(25)
     ambientMaterial(255)
 
 
