@@ -43,7 +43,7 @@ function setup() {
 }
 
 function draw() {
-    background(0, 20);
+    background(0, 7);
     disturbance = map(disturbanceSlider.value(), 0, 100, 0.1, 5)
     magnitude = map(magSlider.value(), 0, 100, 0.5, 25)
     console.log(disturbance)
@@ -61,7 +61,7 @@ function draw() {
                 var angle = noise(xoff, yoff, zoff) * TWO_PI * disturbance
             }
             var v = p5.Vector.fromAngle(angle);
-            // v.setMag(magnitude);
+            v.setMag(magnitude);
             flowfield[index] = v;
             xoff += inc;
             // stroke(255);
