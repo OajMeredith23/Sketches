@@ -7,11 +7,10 @@ let incR = 0;
 let canvasParent = document.getElementById('p5Sketch'),
     canvasWidth = canvasParent.offsetWidth;
 function setup() {
-    var canvas = createCanvas(canvasWidth, canvasWidth);
+    var canvas = createCanvas(1500, 2250);
     canvas.parent('p5Sketch');
     margin = 90
     background(35)
-    fill(255, 55)
 
     for (let x = 0; x < width; x++) {
         for (let y = 0; y < height; y++) {
@@ -19,38 +18,44 @@ function setup() {
             point(x, y)
         }
     }
-}
 
+    // noStroke()
+    // for (let a = 0; a < 3; a++) {
+    //     for (let b = 0; b < 3; b++) {
+    //         fill(150 - random(100), 105)
+    //         let size = random(250)
+    //         ellipse(random(width), random(height), size, size)
+    //     }
 
+    // }
 
-function draw() {
-
+    fill(235, 55)
 
     translate(width / 2, height / 2)
 
-    for (let i = 0; i < 350000; i++) {
-        // stroke(255, map(i, 0, 450000, 0, 55))
+    for (let i = 0; i < 340000; i++) {
 
-        let drawX = map(sin(inc), -1, 1, -200, 200)
+        let drawX = map(sin(inc), -1, 1, 100, 400)
 
-        let drawY = map(cos(inc2), -1, 1, -200, 200)
+        let drawY = map(cos(inc2), -1, 1, 100, 400)
 
         push()
-        rotate(map(noise(incR), -1, 1, 0, 9))
-        stroke(255, 35)
+        rotate(map(noise(incR), -1, 1, 0, 24))
+        stroke(235, 55)
         point(drawX, drawY)
         noStroke()
-        random() > 0.9 ? ellipse(drawX, drawY, 2, 2) : null
+        random() > 0.9 ? ellipse(drawX, drawY, 1, 1) : null
         pop()
 
 
-        inc += 0.01
-        inc2 += 0.02
-        incR += 0.0002
+        inc += 0.0005
+        inc2 += 0.0006
+        incR += 0.003
 
     }
-    noLoop()
 }
+
+
 
 function mousePressed() {
     save('space.png')
